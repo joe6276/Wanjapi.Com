@@ -48,10 +48,12 @@ class Photos{
 
 
 
-    static async addPhoto(){
-        const newPhoto= Photos.readValue()
-        console.log(newPhoto);
         
+
+    static async addPhoto(url:string){
+        // const newPhoto= Photos.readValue()
+        // console.log(newPhoto);
+        const newPhoto={url, albumId:1}
         await fetch('http://localhost:3000/photos', {
             method:"POST",
             body:JSON.stringify(newPhoto),
@@ -93,6 +95,8 @@ class Photos{
       (document.querySelector('#image') as HTMLInputElement).value=photo.url;
       (document.getElementById("addBtn")! as HTMLButtonElement).innerText="Update Photo"
     }
+ 
+    /// Previous Method
     static readValue(){
         const url = (document.querySelector('#image') as HTMLInputElement).value
         return { url , albumId:1}
@@ -106,8 +110,54 @@ const btn = document.getElementById("addBtn")! as HTMLButtonElement
 
 btn.addEventListener('click', async ()=>{
       if(btn.textContent==='Add photos'){
-        await Photos.addPhoto()
+        // await Photos.addPhoto()
       }
+})
+
+//cloudinary Code Here
+const imageInput = document.querySelector('#image') as HTMLInputElement
+imageInput.addEventListener('change', async (e:Event)=>{
+const target = e.target as HTMLInputElement
+const btn = document.getElementById("addBtn")! as HTMLButtonElement
+btn.textContent="Loading..."
+console.log(target);
+
+const files=target.files as FileList;
+
+
+if(files){
+  const formData = new FormData();
+  formData.append("file", files[0]); // the file
+  formData.append("upload_preset", "testing");// preset folder
+  formData.append("cloud_name", "joendambuki16");//username  
+
+let promise = new Promise<{url:string}>((resolve, reject)=>{
+   fetch("https://api.cloudinary.com/v1_1/joendambuki16/image/upload",{
+        method:"POST",
+        body:formData
+      }).then(res=>{
+        return res.json()
+      } 
+      ).then(url=>{
+        resolve(url)
+      }).catch(error=>{
+        reject(error)
+      })
+})
+
+promise.then(data=>{
+    if(data.url){
+        btn.textContent="Add Photos"
+        console.log("Yes");
+        
+        Photos.addPhoto(data.url)
+    }
+    
+}).catch(error=>{
+    console.log(error);
+    
+})
+}
 })
 
 

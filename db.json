@@ -50,6 +50,21 @@
       "url": "https://cdn.shopify.com/s/files/1/0508/6747/0494/products/Elo-Air_2x_161548b0-4c15-4afc-bf85-b5cadee66a30_550x534.png?v=1644336275",
       "albumId": 2,
       "id": 5
+    },
+    {
+      "url": "http://res.cloudinary.com/joendambuki16/image/upload/v1682606964/IMG_20200520_223554_l8ky2m.jpg",
+      "albumId": 1,
+      "id": 10
+    },
+    {
+      "url": "http://res.cloudinary.com/joendambuki16/image/upload/v1682607003/IMG_20200520_224208_wtsyxu.jpg",
+      "albumId": 1,
+      "id": 11
+    },
+    {
+      "url": "http://res.cloudinary.com/joendambuki16/image/upload/v1682607097/IMG_20200608_162506_hxihxl.jpg",
+      "albumId": 1,
+      "id": 12
     }
   ]
 }
