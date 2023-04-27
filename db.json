@@ -1,0 +1,55 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "name": "All"
+    },
+    {
+      "id": 3,
+      "name": "Coding"
+    },
+    {
+      "id": 2,
+      "name": "Vacation"
+    },
+    {
+      "id": 4,
+      "name": "Family"
+    },
+    {
+      "id": 5,
+      "name": "School"
+    },
+    {
+      "id": 6,
+      "name": "Nature"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1,
+      "albumId": 3,
+      "url": "https://imgs.search.brave.com/ysqadkH_tvYB_BM2Ez1V_p7k37_zEqdfJUpHEiT0t0s/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9nYW1p/bmdseWZlLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxNy8x/MS9ST0NDQVQtc2Nh/bGVkLmpwZw"
+    },
+    {
+      "id": 2,
+      "albumId": 3,
+      "url": "https://cdn.shopify.com/s/files/1/0508/6747/0494/products/Vulcan122_KoneProWHT_EloAirWHT_2.5x_550x534.png?v=1623919236"
+    },
+    {
+      "id": 3,
+      "albumId": 5,
+      "url": "https://imgs.search.brave.com/-kKJnrY_LSxVKjiJSsVwosfmCPpvgYQ4pkDg9dNt-Kc/rs:fit:1200:1080:1/g:ce/aHR0cHM6Ly93d3cu/Z2FtZXNsaWZlLmdy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE2/LzA5L1JPQ0NBVF9T/a2x0X0Rlc2t0b3Bf/MDEtcmlnaHRfR1JZ/LUxhcmdlLmpwZw"
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0508/6747/0494/products/Kone-Aimo-Remastered_BLK_top_2.5x_V2_7b197ef9-6126-4f2a-bfd2-fd1b68d69679_550x534.png?v=1650652882",
+      "albumId": 4,
+      "id": 4
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0508/6747/0494/products/Elo-Air_2x_161548b0-4c15-4afc-bf85-b5cadee66a30_550x534.png?v=1644336275",
+      "albumId": 2,
+      "id": 5
+    }
+  ]
+}

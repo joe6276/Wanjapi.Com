@@ -92,9 +92,24 @@
   .content{
     width: 60%;
     padding: 10px;
+    flex-wrap: wrap;
   }
 
   .content input{
-    width: 70%;
+    width: 40%;
     padding: 10px;
+  }
+
+  .content select{
+    width: 40%;
+    padding: 10px;
+  }
+
+  .filter{
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .filter select{
+    padding: 5px 20px;
   }
